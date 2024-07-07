@@ -3,7 +3,7 @@ import { setContext } from '@apollo/client/link/context';
 
 const DEV_URL = 'http://localhost:3000/';
 const PROD_URL = 'https://coolage-5fbe878e57bb.herokuapp.com/';
-const API_ROOT = process.env.NODE_ENV === 'development' ? DEV_URL : PROD_URL;
+const API_ROOT = process.env.PORT === 'development' ? DEV_URL : PROD_URL;
 
 const httpLink = new HttpLink({
   uri: `${API_ROOT}/graphql`
