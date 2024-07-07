@@ -12,7 +12,7 @@ const CloseAction = ({ onClose }) => {
           stroke-width="2"
           stroke="currentColor"
           aria-hidden="true"
-          class="w-6 h-6"
+          className="w-6 h-6"
         >
           <path
             stroke-linecap="round"
