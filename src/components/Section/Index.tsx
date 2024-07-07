@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Item from "../Item";
+import Item from "../Item/Index";
 import classNames from "classnames";
 
 const Section = (props) => {
