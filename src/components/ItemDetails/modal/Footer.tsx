@@ -1,8 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import QuantityInput from "./QuantityInput";
+import { addButtonClasses } from '../../../classes/ModalFooterClasses'
 
-const ModalFooter = (props) => {
+const Footer = (props) => {
   const { item } = props;
   const [quantity, setQuantity] = useState(1);
 
@@ -17,7 +18,7 @@ const ModalFooter = (props) => {
   };
 
   return (
-    <div className="p-4 space-y-4 product-details-footer bg-default2 lg:block">
+    <div className="p-4 product-details-footer bg-default2">
       <div className="flex space-x-3">
         {item.itemAvailable && (
           <QuantityInput
@@ -27,9 +28,7 @@ const ModalFooter = (props) => {
         )}
         <button
           type="button"
-          className="inline-flex items-center justify-center font-semibold break-keep shadow-sm border focus:outline-none rounded-sm border-button-primary text-on-primary bg-primary hover:bg-primary-dark px-4 py-2 text-sm w-full"
-          data-testid="button"
-          id="add-to-cart-13"
+          className={addButtonClasses()}
         >
           {actionLabelWithPrice()}
         </button>
@@ -38,8 +37,8 @@ const ModalFooter = (props) => {
   );
 };
 
-ModalFooter.propTypes = {
+Footer.propTypes = {
   props: PropTypes.func,
 };
 
-export default ModalFooter;
+export default Footer;

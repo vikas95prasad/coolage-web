@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 import CloseModal from "./CloseAction";
-import ModalContent from "./ModalBody";
+import ModalContent from "./Body";
 
 const Container = (props) => {
 

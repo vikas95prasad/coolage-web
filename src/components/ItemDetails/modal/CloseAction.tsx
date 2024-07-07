@@ -1,13 +1,9 @@
 import PropTypes from "prop-types";
 
 const CloseAction = ({ onClose }) => {
-
   return (
     <div className="absolute top-0 right-0 z-10 pt-4 pr-4" onClick={onClose}>
-      <button
-        type="button"
-        className="p-1 rounded-full bg-default text-default2 hover:text-default focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-      >
+      <button type="button" className="p-1">
         <span className="sr-only">Close</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
