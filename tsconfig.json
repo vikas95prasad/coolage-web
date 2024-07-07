@@ -1,15 +1,59 @@
+// {
+//   "files": [],
+//   "references": [
+//     {
+//       "path": "./tsconfig.app.json"
+//     },
+//     {
+//       "path": "./tsconfig.node.json"
+//     }
+//   ],
+//   "compilerOptions": {
+//     "allowJs": false,
+//     "noImplicitAny": false
+//   }
+// }
+
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "module": "commonjs",
+//     "lib": ["es2017"],
+//     "sourceMap": false,
+//     "declaration": false,
+//     "moduleResolution": "node",
+//     "noImplicitAny": false,
+//     "removeComments": false,
+//     "newLine": "LF",
+//     "skipLibCheck": false,
+//     "types": ["node"],
+//     "outDir": "dist",
+//     "jsx": "react"
+//   },
+//   "include": [
+//     "src/**/*",
+//   ],
+//   "exclude": [
+//     "node_modules"
+//   ]
+// }
+
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
   "compilerOptions": {
-    "allowJs": false,
-    "noImplicitAny": false
-  }
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es6",
+    "module":"es2015",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": ["es2018", "dom"],
+    "outDir": "build",
+    "sourceRoot": "src",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["**/node_modules"]
 }
