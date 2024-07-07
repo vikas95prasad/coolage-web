@@ -1,10 +1,23 @@
+import React from "react";
 import PropTypes from "prop-types";
 import Item from "../Item/Index";
 import classNames from "classnames";
 
-const Section = (props) => {
-  const { items, sectionAvailable, onItemClickHandler } = props;
+interface SectionProps {
+  id: number;
+  label: string;
+  items: {
+    id: number;
+    label: string;
+    description: string;
+    price: number;
+    availability: boolean;
+  }[];
+  sectionAvailable: boolean;
+  onItemClickHandler: (id: object) => void;
+}
 
+const Section: React.FC<SectionProps> = ({ items, sectionAvailable, onItemClickHandler }) => {
   const itemsClasses = () => {
     return classNames(
       "grid grid-cols-2 mt-4.5 gap-x-3 sm:gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3",
@@ -24,6 +37,7 @@ const Section = (props) => {
       <div className={itemsClasses()}>
         {items.map((item) => (
           <Item
+            key={item.id}
             id={item.id}
             label={item.label}
             description={item.description}
@@ -39,9 +53,9 @@ const Section = (props) => {
 };
 
 Section.propTypes = {
-  items: PropTypes.array,
-  sectionAvailable: PropTypes.func,
-  onItemClickHandler: PropTypes.func,
+  items: PropTypes.array.isRequired,
+  sectionAvailable: PropTypes.bool.isRequired,
+  onItemClickHandler: PropTypes.func.isRequired,
 };
 
 export default Section;

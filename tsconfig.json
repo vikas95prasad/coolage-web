@@ -40,6 +40,7 @@
 
 {
   "compilerOptions": {
+     "jsx": "react-jsx",
     "removeComments": true,
     "sourceMap": true,
     "target": "es6",
@@ -54,6 +55,6 @@
     "experimentalDecorators": true,
     "noImplicitAny": false,
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["**/node_modules"]
 }

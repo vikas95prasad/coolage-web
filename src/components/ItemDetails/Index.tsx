@@ -1,7 +1,17 @@
-import PropTypes from "prop-types";
 import ModalContent from "./modal/Container";
 
-const ItemModal = (props) => {
+interface ItemModalProps {
+  item: {
+    id: number;
+    label: string;
+    description: string;
+    price: number;
+    availability: boolean;
+  };
+  onClose: () => void;
+}
+
+const ItemModal: React.FC<ItemModalProps> = (props) => {
   return (
     <div className="modal-container">
       <div className="modal-wrap product-details-modal-wrapper">
@@ -19,10 +29,6 @@ const ItemModal = (props) => {
       </div>
     </div>
   );
-};
-
-ItemModal.propTypes = {
-  props: PropTypes.object,
 };
 
 export default ItemModal;

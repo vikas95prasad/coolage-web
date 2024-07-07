@@ -1,7 +1,19 @@
 import PropTypes from "prop-types";
 import { actionButtonClasses } from "../../classes/ItemClasses";
 
-const Item = (props) => {
+interface ItemProps {
+  id: number;
+  label: string;
+  description: string;
+  price: number;
+  sectionAvailable: boolean;
+  itemAvailable: boolean;
+  onItemClickHandler: (id: object) => void;
+}
+
+const Item: React.FC<ItemProps> = (props) => {
+
+// const Item = (props) => {
   const {
     id,
     label,
@@ -67,12 +79,22 @@ const Item = (props) => {
 };
 
 Item.propTypes = {
-  id: PropTypes.number,
-  label: PropTypes.string,
-  description: PropTypes.string,
-  price: PropTypes.string,
-  itemAvailable: PropTypes.string,
-  onItemClickHandler: PropTypes.func,
+  id: PropTypes.number.isRequired,
+  label: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  sectionAvailable: PropTypes.bool.isRequired,
+  itemAvailable: PropTypes.bool.isRequired,
+  onItemClickHandler: PropTypes.func.isRequired,
 };
+
+// Item.propTypes = {
+//   id: PropTypes.number,
+//   label: PropTypes.string,
+//   description: PropTypes.string,
+//   price: PropTypes.string,
+//   itemAvailable: PropTypes.string,
+//   onItemClickHandler: PropTypes.func,
+// };
 
 export default Item;
