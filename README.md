@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Mrs Coolage (React.js + TypeScript + Vite Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a single-page application built with **React.js** using **TypeScript** and **Vite**. The application fetches data from a GraphQL endpoint using **Apollo Client** and includes animations with **Framer Motion**. The final project is deployed and live at [[Visit Coolage](http://coolage-5fbe878e57bb.herokuapp.com)].
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [Usage](#usage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Installing
+1. Clone the repository
+   ```sh
+   git clone https://github.com/vikas95prasad/coolage-web.git
+2. cd coolage-web
+   ```sh
+   cd your-repo-name
+4. Install dependencies
+   ```sh
+   npm install
+Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+### Technologies Used
+1. **React.js:** A JavaScript library for building user interfaces
+2. **TypeScript:** A superset of JavaScript that adds static typing
+3. **Vite:** A fast build tool and development server
+4. **Apollo Client:** A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL
+5. **Framer Motion:** A library to power animations in React
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Setup
+To set up the project, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository and install dependencies as described in the Installing section.
+2. Create a .env file in the root of the project with your GraphQL endpoint:
+   ```sh
+   VITE_GRAPHQL_ENDPOINT=https://your-graphql-endpoint
+
+### Usage
+
+1. To start the development server:
+   ```sh
+   npm run dev
+2. Open http://localhost:3000 to view it in the browser.
