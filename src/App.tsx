@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MenuPage from './pages/MenuPage';
+import MenuPage from './pages/HomePage';
 
 const App: React.FC = () => {
   return (

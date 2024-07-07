@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   /* Colors */
   --color-primary: #fa5553;
@@ -92,67 +90,11 @@
   text-rendering: optimizeLegibility;
 }
 
-/* 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
 .product-details-image img {
   width:700px
 }
 
-.ant-modal-wrap.product-details-modal-wrapper {
-  overflow: auto;
+.modal-wrap.product-details-modal-wrapper {
   top: 15%;
 }
 
@@ -165,13 +107,13 @@ button:focus-visible {
   text-align: center;
 }
 
-.ant-modal-wrap.product-details-modal-wrapper .ant-modal {
+.modal-wrap.product-details-modal-wrapper .modal {
   margin-top: 0;
   max-width: 1024px;
   padding-bottom: 0;
 }
 
-.ant-modal-root .ant-modal-centered .ant-modal {
+.modal {
   top: 0;
   display: inline-block;
   padding-bottom: 0;
@@ -179,7 +121,7 @@ button:focus-visible {
   vertical-align: middle;
 }
 
-.ant-modal-mask {
+.modal-container {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -188,8 +130,7 @@ button:focus-visible {
   pointer-events: none;
 }
 
-
-.ant-modal {
+.modal {
   width: auto;
   height: auto;
   margin-top: 0;
@@ -202,7 +143,7 @@ button:focus-visible {
   vertical-align: middle;
 }
 
-.ant-modal-content {
+.modal-content {
   padding: 0 !important;
   background-color: transparent;
   box-shadow: none;
@@ -217,7 +158,7 @@ button:focus-visible {
   box-sizing: border-box;
 }
 
-.ant-modal-body {
+.modal-body {
   padding: 0!important;
   text-align: center;
   font-size: 14px;
@@ -236,10 +177,6 @@ button:focus-visible {
   overflow-x: hidden;
 }
 
-.product-details-modal {
-  /* max-height: calc(100vh - 40px); */
-}
-
 .product-details-modal-content {
   max-width: none;
   scroll-behavior: smooth;
@@ -250,7 +187,7 @@ button:focus-visible {
   max-height: calc(100vh - 40px);
 }
 
-.ant-spin-container {
+.spin-container {
   position: relative;
   transition: opacity 0.3s;
   height: 100%;
