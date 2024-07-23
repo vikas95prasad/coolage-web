@@ -13,7 +13,6 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = (props) => {
 
-// const Item = (props) => {
   const {
     id,
     label,
@@ -87,14 +86,5 @@ Item.propTypes = {
   itemAvailable: PropTypes.bool.isRequired,
   onItemClickHandler: PropTypes.func.isRequired,
 };
-
-// Item.propTypes = {
-//   id: PropTypes.number,
-//   label: PropTypes.string,
-//   description: PropTypes.string,
-//   price: PropTypes.string,
-//   itemAvailable: PropTypes.string,
-//   onItemClickHandler: PropTypes.func,
-// };
 
 export default Item;
